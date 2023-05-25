@@ -67,7 +67,7 @@ namespace JobBoardAPI
             }
 
             existingUser.Username = user.Username;
-            existingUser.Password = user.Password; // You may want to hash the password here instead of storing it in plain text
+            existingUser.Password = user.Password; 
 
             _dbContext.Users.Update(existingUser);
             await _dbContext.SaveChangesAsync();

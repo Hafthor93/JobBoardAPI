@@ -1,4 +1,5 @@
-﻿using JobBoardAPI.Models;
+﻿using JobBoardAPI.Controllers;
+using JobBoardAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
@@ -15,6 +16,11 @@ namespace JobboardAPI.Models
 
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Job> Jobs { get; set; }
+
+        public DbSet<Profile> Profile { get; set; }
+
+        public DbSet<Applicant> Applicants { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
